@@ -29,8 +29,8 @@ Lita.configure do |config|
   secrets = YAML.load_file('secrets.yml')
 
   ## Example: Set options for the Redis connection.
-  config.redis.host = secrets.inspect['development']['redis_host']
-  config.redis.port = secrets.inspect['development']['redis_port']
+  #config.redis.host = secrets.inspect['development']['redis_host']
+  #config.redis.port = secrets.inspect['development']['redis_port']
 
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
@@ -42,6 +42,6 @@ Lita.configure do |config|
   config.adapters.shell.private_chat = true
 
   # Heroku
-  #config.redis.host = @secrets.inspect['production']['redis_host']
-  #config.redis.port = @secrets.inspect['production']['redis_port']
+  config.redis.host = @secrets.inspect['production']['redis_host']
+  config.redis.port = @secrets.inspect['production']['redis_port']
 end
