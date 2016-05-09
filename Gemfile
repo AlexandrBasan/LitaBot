@@ -6,8 +6,6 @@ ruby '2.3.0'
 
 gem "lita"
 
-gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
-
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
 
