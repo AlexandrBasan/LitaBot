@@ -1,0 +1,119 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (4.2.6)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    artii (2.1.1)
+    crass (1.0.2)
+    eventmachine (1.2.0.1)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    faye-websocket (0.10.3)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.5.1)
+    http_router (0.11.2)
+      rack (>= 1.0.0)
+      url_mount (~> 0.2.1)
+    i18n (0.7.0)
+    ice_nine (0.11.2)
+    json (1.8.3)
+    lita (4.7.0)
+      bundler (>= 1.3)
+      faraday (>= 0.8.7)
+      http_router (>= 0.11.2)
+      i18n (>= 0.6.9)
+      ice_nine (>= 0.11.0)
+      multi_json (>= 1.7.7)
+      puma (>= 2.7.1)
+      rack (>= 1.5.2)
+      rb-readline (>= 0.5.1)
+      redis-namespace (>= 1.3.0)
+      thor (>= 0.18.1)
+    lita-abuse (0.2.0)
+      lita (>= 4.6)
+    lita-ascii-art (0.1.0)
+      artii (>= 2.0.4)
+      lita (>= 4.0.0)
+    lita-catfacts (0.0.4)
+      lita (>= 2.3)
+    lita-catgif (0.0.2)
+      lita (>= 2.6)
+    lita-days (0.1.0)
+      lita (>= 4.3)
+    lita-keyword-arguments (1.0.1)
+      lita (>= 3.2)
+      slop (~> 3.5)
+    lita-manners (0.1.1)
+      lita (>= 4.4)
+    lita-random (0.6.0)
+      lita (~> 4.4)
+      lita-keyword-arguments (~> 1.0)
+    lita-rules (0.0.1)
+      lita (>= 3.0)
+    lita-slack (1.7.2)
+      eventmachine
+      faraday
+      faye-websocket (>= 0.8.0)
+      lita (>= 4.6.0)
+      multi_json
+    lita-whois (1.1.0)
+      lita (~> 4.2)
+      whois
+    lita-wikipedia (0.1.0)
+      lita (>= 3.1)
+      nokogiri (>= 1.6.6)
+      sanitize (>= 3.1.2)
+    mini_portile2 (2.0.0)
+    minitest (5.8.4)
+    multi_json (1.12.0)
+    multipart-post (2.0.0)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    nokogumbo (1.4.7)
+      nokogiri
+    puma (3.4.0)
+    rack (1.6.4)
+    rb-readline (0.5.3)
+    redis (3.3.0)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
+    sanitize (4.0.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.4.4)
+      nokogumbo (~> 1.4.1)
+    slop (3.6.0)
+    thor (0.19.1)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    url_mount (0.2.1)
+      rack
+    websocket-driver (0.6.3)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
+    whois (3.6.5)
+      activesupport (>= 3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  lita
+  lita-abuse
+  lita-ascii-art
+  lita-catfacts
+  lita-catgif
+  lita-days
+  lita-manners
+  lita-random (~> 0.6.0)
+  lita-rules
+  lita-slack
+  lita-whois
+  lita-wikipedia
+
+BUNDLED WITH
+   1.11.2
