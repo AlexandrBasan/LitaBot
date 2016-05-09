@@ -36,8 +36,8 @@ Lita.configure do |config|
   else
     config.adapters.slack.token = ENV["SLACK_TOKEN"]
     # Heroku
-    config.redis.host = ENV["REDIS_HOST"]
-    config.redis.port = ENV["REDIS_PORT"]
+    config.redis[:url] = ENV["REDISTOGO_URL"]
+    config.http.port = ENV["REDIS_PORT"]
   end
 
   ## Example: Set configuration for any loaded handlers. See the handler's
