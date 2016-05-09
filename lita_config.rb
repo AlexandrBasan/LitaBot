@@ -27,20 +27,17 @@ Lita.configure do |config|
 
   config.robot.adapter = :slack
 
-  ENV["RACK_ENV"] = 'development' # 'development', 'production'
-
-  case ENV["RACK_ENV"]
-    when 'development'
-      require 'yaml'
-      secrets = YAML.load_file('secrets.yml')
-      ## Example: Set options for the Redis connection.
-      config.redis.host = secrets.inspect['development']['redis_host']
-      config.redis.port = secrets.inspect['development']['redis_port']
-    when 'production'
-      config.adapters.slack.token = ENV["SLACK_TOKEN"]
-      # Heroku
-      config.redis.host = ENV["REDIS_HOST"]
-      config.redis.port = ENV["REDIS_PORT"]
+  if ENV["RACK_ENV"].nil?
+    require 'yaml'
+    secrets = YAML.load_file('secrets.yml')
+    ## Example: Set options for the Redis connection.
+    config.redis.host = secrets.inspect['development']['redis_host']
+    config.redis.port = secrets.inspect['development']['redis_port']
+  else
+    config.adapters.slack.token = ENV["SLACK_TOKEN"]
+    # Heroku
+    config.redis.host = ENV["REDIS_HOST"]
+    config.redis.port = ENV["REDIS_PORT"]
   end
 
   ## Example: Set configuration for any loaded handlers. See the handler's
