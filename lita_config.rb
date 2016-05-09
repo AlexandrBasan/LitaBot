@@ -42,6 +42,6 @@ Lita.configure do |config|
   config.adapters.shell.private_chat = true
 
   # Heroku
-  config.redis.host = @secrets.inspect['production']['redis_host']
-  config.redis.port = @secrets.inspect['production']['redis_port']
+  config.redis.host = secrets.inspect['production']['redis_host']
+  config.redis.port = secrets.inspect['production']['redis_port']
 end
