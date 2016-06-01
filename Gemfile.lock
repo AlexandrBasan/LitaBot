@@ -60,6 +60,8 @@ GEM
       faye-websocket (>= 0.8.0)
       lita (>= 4.6.0)
       multi_json
+    lita-weather (0.0.4)
+      lita (>= 2.3)
     lita-whois (1.1.0)
       lita (~> 4.2)
       whois
@@ -112,6 +114,7 @@ DEPENDENCIES
   lita-random (~> 0.6.0)
   lita-rules
   lita-slack
+  lita-weather (~> 0.0.4)
   lita-whois
   lita-wikipedia
 

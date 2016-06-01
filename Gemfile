@@ -30,3 +30,4 @@ gem "lita-rules" # what are the rules?
 gem 'lita-random', '~> 0.6.0' # https://github.com/braiden-vasco/lita-random
 gem "lita-whois" # whois example.com
 gem "lita-wikipedia" # wiki ruby language
+gem 'lita-weather', '~> 0.0.4' # weather forecast
