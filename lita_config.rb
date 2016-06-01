@@ -33,11 +33,15 @@ Lita.configure do |config|
     ## Example: Set options for the Redis connection.
     config.redis.host = secrets.inspect['development']['redis_host']
     config.redis.port = secrets.inspect['development']['redis_port']
+    # https://www.wunderground.com
+    config.handlers.weather.api_key = secrets.inspect['development']['WeatherUndergroundAPIKey']
   else
     config.adapters.slack.token = ENV["SLACK_TOKEN"]
     # Heroku
     config.redis[:url] = ENV["REDISTOGO_URL"]
     config.http.port = ENV["PORT"]
+    # https://www.wunderground.com
+    config.handlers.weather.api_key = ENV["WeatherUndergroundAPIKey"]
   end
 
   ## Example: Set configuration for any loaded handlers. See the handler's
