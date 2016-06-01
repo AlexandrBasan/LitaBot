@@ -34,14 +34,14 @@ Lita.configure do |config|
     config.redis.host = secrets.inspect['development']['redis_host']
     config.redis.port = secrets.inspect['development']['redis_port']
     # https://www.wunderground.com
-    config.handlers.weather.api_key = secrets.inspect['development']['WeatherUndergroundAPIKey']
+    config.handlers.weather.api_key = secrets.inspect['development']['weather_underground_api_key']
   else
     config.adapters.slack.token = ENV["SLACK_TOKEN"]
     # Heroku
     config.redis[:url] = ENV["REDISTOGO_URL"]
     config.http.port = ENV["PORT"]
     # https://www.wunderground.com
-    config.handlers.weather.api_key = ENV["WeatherUndergroundAPIKey"]
+    config.handlers.weather.api_key = ENV["WEATHER_UNDERGROUND_API_KEY"]
   end
 
   ## Example: Set configuration for any loaded handlers. See the handler's
